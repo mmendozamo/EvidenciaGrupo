@@ -1,0 +1,154 @@
+body {
+    background: #333;
+    padding-top: 150px;
+  }
+  
+  /* Contenedor para las tarjetas */
+  .card-container {
+    font-family: 'Open Sans', sans-serif; /* Corrección de la fuente */
+    font-size: 120px;
+    font-weight: bold;
+    width: 1200px; /* Ajuste de ancho para acomodar los regalos horizontalmente */
+    height: 400px; /* Ajuste de altura para acomodar los regalos */
+    margin: 80px auto;
+    border-radius: 10px;
+    perspective: 1400px;
+  }
+  
+  /* Estilo de la tarjeta */
+  .card {
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .front, .back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    color: #fff;
+    background: #2196f3;
+    flex-direction: row; /* Para alinear los regalos en una fila */
+  }
+  
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    color: #2196f3;
+    background: #fff;
+  }
+  
+  /* Contenedor para los regalos dentro del front */
+  .front .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra los regalos horizontalmente */
+    align-items: flex-start; /* Alinea los regalos en la parte superior */
+    gap: 20px; /* Espacio entre los regalos */
+  }
+  
+  /* Estilo del regalo */
+  .regalo {
+    width: 210px; /* Tamaño de los regalos */
+    margin: 0; /* Quitar el margen automático, ya que el contenedor los centra */
+    cursor: pointer;
+    position: relative; /* Para posicionar las tapas sobre las cajas */
+  }
+  
+  .caja, .tapa {
+    background:
+      -webkit-radial-gradient(white 10%, transparent 15.1%),
+      -webkit-radial-gradient(white 7%, transparent 15.1%),
+    #f80000;
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .caja {
+    width: 200px; /* Reducido de 400px */
+    height: 125px; /* Reducido de 250px */
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    position: relative; /* Para posicionar el texto promocional dentro de la caja */
+  }
+  
+  .tapa {
+    width: 200px; /* Reducido de 400px */
+    height: 35px; /* Reducido de 70px */
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0 2px;
+    background-color: #f80000;
+    /* Transiciones */
+    top: 0;
+    left: 0;
+    transition: 
+      top ease-out 0.5s,
+      left ease-out 0.5s,
+      transform ease-out 0.5s;
+  }
+  
+  .caja span, .tapa span {
+    position: absolute;
+    display: block;
+    background: rgba(239, 184, 16, 0.8);
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  }
+  
+  .caja span:first-child {
+    width: 100%;
+    height: 30px; /* Reducido de 60px */
+    top: 40px; /* Ajustado proporcionalmente */
+  }
+  
+  .caja span:last-child, .tapa span {
+    width: 30px; /* Reducido de 60px */
+    height: 100%;
+    left: 85px; /* Ajustado proporcionalmente de 170px */
+  }
+  
+  .tapa span {
+    left: 86px; /* Ajustado proporcionalmente de 172px */
+  }
+  
+  .promo {
+    font-size: 12px; /* Reducido de 30px */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    position: relative;
+    margin-top: 10px; /* Espacio entre el regalo y el texto */
+    transition: all ease-out 0.7s;
+  }
+  
+  .promo p {
+    font-size: 10px; /* Reducido de 24px */
+    margin: 0;
+  }
+  
+  .promo h2 {
+    font-size: 15px; /* Reducido de 40px */
+    margin: 0;
+  }
+  
+  /* Efecto hover */
+  .regalo:hover .tapa {
+    top: -50px; /* Ajustado proporcionalmente */
+    transform: rotateZ(10deg);
+    left: 5px; /* Ajustado proporcionalmente */
+  }
+  
