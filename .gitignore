@@ -1,0 +1,19 @@
+# Ignore Visual Studio temporary files, build results, and
+# folder for offline cache.
+*.csproj.user
+*.rsuser
+*.suo
+*.user
+*.cache
+*.ilk
+*.ncb
+*.log
+*.wrn
+*.sln.docstates
+*.userosscache
+*.userprefs
+*.sdf
+*.opensdf
+*.opendb
+*.VC.db
+.vs/

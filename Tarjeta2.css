@@ -2,12 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 #contenedor {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 #cabecera {
@@ -18,7 +21,7 @@ body {
 
 #main-content {
     display: flex;
-    flex-wrap: nowrap;
+    flex-grow: 1;
 }
 
 #menu {
@@ -33,21 +36,20 @@ body {
     background-size: cover;
     flex-grow: 1;
     padding: 20px;
+    overflow: auto;
 }
 
 #pie {
     background-color: #DAF7A6;
     padding: 10px;
     text-align: center;
-    clear: both;
-    width: 98%;
 }
 
 .regalo {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    flex-wrap: wrap;
+    margin-top: 160px;
 }
 
 .box-wrapper {
